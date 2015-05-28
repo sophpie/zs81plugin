@@ -1,0 +1,9 @@
+{
+  "name" : "zf2-listeners-analyzer",
+  "display_name" : "ZF2 Listener analyzer",
+  "version" : "1.0.8",
+  "type": ["zray", "route"],
+  "eula": "EULA.txt",
+  "readme": "README.txt",
+  "logo": "logo.png"
+}
