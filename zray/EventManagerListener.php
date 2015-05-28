@@ -1,5 +1,5 @@
 <?php
-namespace ZRayRouter;
+namespace ZRayListeners;
 
 class EventManagerListener
 {
@@ -16,6 +16,9 @@ class EventManagerListener
     
     public function onGetCallback($context,&$storage)
     {
+       $file = basename($context['calledFromFile']);
+       $line = $context['calledFromLine'];
+       if ($file != 'EventManager.php' || $line != '464') return;
        $listener = $context['returnValue'];
        $listenerName = 'undefined';
        $listenerName = self::getListenerName($listener);
